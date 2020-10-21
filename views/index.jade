@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='node_modules/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    //script(src='node_modules/bootstrap/dist/js/bootstrap.min.js')
+    //script(src='javascripts/login.js')
+
+  body(class="container")
+    .container(class="d-flex flex-row justify-content-center align-items-center")
+
+    h1(class="text-center") Login Page
+    br
+    form(role='form', action="/auth",method="POST", style='max-width: 370px;',class='form-signin jumbotron my-auto col-lg-6 offset-lg-4')
+      h1( class="form-signin-heading") Welcome! Please Sign In
+      .form-group
+          input.form-control(type='text',required=true,class="form-control p-2", name="username", placeholder='Enter Username')
+      .form-group
+        input.form-control(type='password',required=true, name="password",class="form-control p-2", placeholder='Password')
+
+      button.btn.btn-default(type='submit',class="btn btn-primary btn-block") Sign In
+      &nbsp;
+      
+      .container(class="text-center")
+        a.btn(class="btn-link p-3 mb-4",style="text-decoration:underline;" ,href="./regsister") Create Account
+

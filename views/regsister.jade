@@ -1,0 +1,51 @@
+doctype html
+html
+ head
+    title= title
+    meta(name='regsister', content='width=device-width, initial-scale=1.0')
+    link(href='node_modules/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='node_modules/font-awesome/css/font-awesome.css', rel='stylesheet', type='text/css')
+    
+    body(class="container")
+    .container(class="d-flex flex-row justify-content-center align-items-center")
+
+ h1(class="text-center") Regsistration
+    br
+    form( class="jumbotron my-auto col-lg-6 offset-lg-3"  action="/regsister",method="POST")
+      .form-group.input-group
+        .input-group-prepend
+          span.input-group-text
+            i.fa.fa-user
+        input.form-control(name='fullname' placeholder='Full name' type='text')
+     
+      .form-group.input-group
+        .input-group-prepend
+          span.input-group-text
+            i.fa.fa-envelope
+        input.form-control(name='email' placeholder='Email address' type='email')
+     
+      .form-group.input-group
+        .input-group-prepend
+          span.input-group-text
+            i.fa.fa-phone
+        input.form-control(name='phoneNo' placeholder='Phone number' type='phone')
+
+  
+      .form-group.input-group
+        .input-group-prepend
+          span.input-group-text
+            i.fa.fa-lock
+        input.form-control(name='password' placeholder='Create password' type='password')
+      
+      .form-group.input-group
+        .input-group-prepend
+          span.input-group-text
+            i.fa.fa-lock
+        input.form-control(name='repeatPass' placeholder='Repeat password' type='password')
+      
+      .form-group
+        button.btn.btn-primary.btn-block(type='submit')  Create Account  
+    
+      h4.text-center
+        | Have an account? 
+        a(href='./..') Log In

@@ -1,0 +1,61 @@
+doctype html
+html
+ head
+    title= title
+    meta(name='kk', content='width=device-width, initial-scale=1.0')
+    link(href='node_modules/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='node_modules/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    
+    body(class="container")
+
+ h1(class="text-center") My Profile
+    br
+
+    .container-lg
+  .table-responsive
+    .table-wrapper
+      .table-title
+        .row
+          .col-sm-8
+            h2
+              | Users 
+              b Details
+          .col-sm-4
+            button.btn.btn-info.add-new(type='button')
+              i.fa.fa-plus
+              |  Add New
+            a.btn.btn-secondary.logout(href="/logout")
+              |  Logout          
+      table.table.table-bordered
+        thead
+          tr
+            th Name
+            th Email
+            th Phone
+            th Actions
+        tbody
+          tr
+            td John Doe
+            td Administration
+            td (171) 555-2222
+            td
+
+              a.edit(title='' data-toggle='tooltip' data-original-title='Edit' ,href="/delete")
+                i(class="fa fa-trash" ,aria-hidden="true",style="font-size: xx-large;color: darkred; margin-right: 23px;") 
+          
+              a.delete(title='' data-toggle='tooltip' data-original-title='Delete' ,href="/edit")
+                 i(class="fa fa-pencil-square-o" ,aria-hidden="true",style="font-size: xx-large;color: darkgreen") 
+    
+          tr
+            td Peter Parker
+            td Customer Service
+            td (313) 555-5735
+            td
+             
+           
+              a.edit(title='' data-toggle='tooltip' data-original-title='Edit' ,href="/delete")
+                i(class="fa fa-trash" ,aria-hidden="true",style="font-size: xx-large;color: darkred; margin-right: 23px;") 
+          
+              a.delete(title='' data-toggle='tooltip' data-original-title='Delete' ,href="/edit")
+                 i(class="fa fa-pencil-square-o" ,aria-hidden="true",style="font-size: xx-large;color: darkgreen") 
+    
